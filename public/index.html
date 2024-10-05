@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Management</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Bank Management System</h1>
+
+  <!-- Phần hiển thị các tài khoản tín dụng cùng số nợ -->
+  <section>
+    <h2>Tài khoản tín dụng cùng tổng số nợ tồn đọng</h2>
+    <button id="fetchCreditDebt">Lấy danh sách tài khoản tín dụng</button>
+    <ul id="creditDebtList"></ul>
+  </section>
+
+  <!-- Phần hiển thị 10 khách hàng có tổng số tiền gửi nhiều nhất -->
+  <section>
+    <h2>10 khách hàng có tổng số tiền gửi nhiều nhất</h2>
+    <button id="fetchTopCustomers">Lấy danh sách khách hàng</button>
+    <ul id="topCustomersList"></ul>
+  </section>
+
+  <!-- Phần thực hiện thanh toán từ tài khoản gửi tiền cho tài khoản tín dụng -->
+  <section>
+    <h2>Thanh toán tài khoản tín dụng</h2>
+    <form id="paymentForm">
+      <label for="debitAccountId">Mã tài khoản gửi tiền:</label>
+      <input type="number" id="debitAccountId" required><br>
+      <label for="creditAccountId">Mã tài khoản tín dụng:</label>
+      <input type="number" id="creditAccountId" required><br>
+      <label for="amount">Số tiền thanh toán:</label>
+      <input type="number" id="amount" required><br>
+      <button type="submit">Thực hiện thanh toán</button>
+    </form>
+    <p id="paymentResult"></p>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
